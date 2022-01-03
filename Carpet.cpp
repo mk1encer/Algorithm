@@ -29,3 +29,4 @@ int main(){
 
     cout<<answer[0]<<" , "<<answer[1]<<endl;
 }
+//문제 푼 소감 추가
