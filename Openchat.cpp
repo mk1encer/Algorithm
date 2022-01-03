@@ -75,3 +75,4 @@ int main(){
         cout << answer[i] << endl;
     }
 }
+//문제 푼 것 추가
