@@ -15,7 +15,7 @@ int compare(string str1, string str2){
     return n;
 }
 
-void dfs(string now, string target, vector<string> words,int cnt){
+void bfs(string now, string target, vector<string> words,int cnt){
     if(now==target) {
         result.push_back(cnt);
     }
@@ -38,7 +38,7 @@ void dfs(string now, string target, vector<string> words,int cnt){
     }
 
     for(int i=0;i<queue.size();i++){
-        dfs(queue[i],target,words,cnt);
+        bfs(queue[i],target,words,cnt);
     }
 }
 
@@ -53,7 +53,7 @@ int solution(string begin, string target, vector<string> words) {
     //for문이 끝까지 돌았으면 words안에 없으므로 0
     if(i==n) return 0;
 
-    dfs(begin, target, words,n);
+    bfs(begin, target, words,n);
 
     for(int i=0;i<result.size();i++) {
         if(words.size()-result[i]<answer)
